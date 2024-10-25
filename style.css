@@ -1,0 +1,42 @@
+  /* Set the page background color to black */
+  body {
+    background-color: #000000;
+    color: white; /* Set text color to white for readability */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+ /* Styling for the top bar */
+ .top-bar {
+    width: 100%;
+    background-color: #474bc5; /* Dark background for the top bar */
+    color: white;
+    text-align: left;
+    padding: 15px 0;
+    font-size: 24px; /* Font size for top bar title */
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Basic styling for the button */
+.create-task-btn {
+    padding: 10px 20px;
+    background-color: #444343; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    width: 50%; 
+    height: 10%;
+}
+
+/* Hover effect */
+.create-task-btn:hover {
+    background-color: #474bc5;
+}
