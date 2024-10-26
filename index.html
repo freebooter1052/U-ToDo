@@ -4,24 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-    <title>Create Task Button</title>
+    <title>Task Manager</title>
 </head>
 <body>
     
-    <!-- Top bar displaying "Task Manager" -->
     <div class="top-bar">U-ToDo</div>
 
-    <!-- Create Task Button -->
-    <button class="create-task-btn" onclick="createTask()">+ Create Task</button>
+    <div class="container">
 
-    <script>
-        // JavaScript function to handle task creation
-        function createTask() {
-            alert("Task created successfully!");
-            // Add code here to create a task
-        }
-    </script>
+        <div class="top-section">
+            <div class="current-tasks">
+                <h2>Current Tasks</h2>
+                <p id="noTasksMessage" class="no-tasks-message">No current tasks</p>
+                <ul id="taskList" class="task-list"></ul>
+            </div>
+
+            <div class="right-column">
+                <h2>Additional Information</h2>
+                <p>Any additional content, such as reminders or notes, can go here.</p>
+            </div>
+        </div>
+
+        <div class="task-creation">
+            <input type="text" id="taskInput" class="task-input" placeholder="Enter the task here">
+            <button class="create-task-btn" onclick="showTaskInput()">+ Create Task</button>
+            <button id="confirmBtn" class="confirm-btn" onclick="addTask()">Add Task</button>
+        </div>
+
+        <div class="bottom-container">
+            <h3>Finished Tasks</h3>
+            <ul id="finishedTasksList" class="task-list finished-tasks"></ul>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 
 </body>
 </html>

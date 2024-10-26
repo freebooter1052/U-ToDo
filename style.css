@@ -1,42 +1,117 @@
-  /* Set the page background color to black */
-  body {
+/* Set the page background color to black */
+body {
     background-color: #000000;
-    color: white; /* Set text color to white for readability */
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
- /* Styling for the top bar */
- .top-bar {
-    width: 100%;
-    background-color: #474bc5; /* Dark background for the top bar */
     color: white;
-    text-align: left;
-    padding: 15px 0;
-    font-size: 24px; /* Font size for top bar title */
-    font-weight: bold;
-    position: absolute;
-    top: 0;
-    left: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Basic styling for the button */
-.create-task-btn {
+/* Styling for the top bar */
+.top-bar {
+    width: 100%;
+    background-color: #474bc5;
+    color: white;
+    padding: 15px 0;
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Container for the two sections */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Section container for current tasks and new right column */
+.top-section {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* Styling for the current tasks section */
+.current-tasks {
+    flex: 1;
+    padding-right: 20px;
+    overflow-y: auto;
+}
+
+/* Styling for the new right-side container */
+.right-column {
+    flex: 1;
+    background-color: #333333; /* Dark background for contrast */
+    padding: 20px;
+    margin-left: 10px; /* Space between columns */
+    border-radius: 5px;
+}
+
+/* Message for empty task list */
+.no-tasks-message {
+    color: #888888;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Task list item styling */
+.task-list-item {
+    background-color: #000000;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between; /* Space between content and checkbox */
+    align-items: center; /* Center items vertically */
+}
+
+/* Input box and button styling */
+.task-input {
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #444343;
+    color: white;
+    display: none;
+    margin-left: 400px; /* Center horizontally */
+}
+.create-task-btn, .confirm-btn {
     padding: 10px 20px;
-    background-color: #444343; /* Green background */
-    color: white; /* White text */
+    font-size: 20px;
+    width: 50%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 25px;
-    width: 50%; 
-    height: 10%;
+    margin-left: 400px; /* Center horizontally */
+    flex-grow: 1;
+}
+.create-task-btn {
+    background-color: #474bc5;
+}
+.confirm-btn {
+    background-color: #4CAF50;
+    display: none;
+}
+.confirm-btn:hover, .create-task-btn:hover {
+    background-color: #3743b5;
 }
 
-/* Hover effect */
-.create-task-btn:hover {
-    background-color: #474bc5;
+/* New bottom container styling */
+.bottom-container {
+    background-color: #000000; /* Dark background for contrast */
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Styling for finished tasks section */
+.finished-tasks {
+    padding-top: 20px;
 }
